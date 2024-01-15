@@ -11,8 +11,7 @@ document.addEventListener("turbo:load", function () {
 
   // input要素を取得
   const fileField = document.querySelector(
-    'input[type="file"][name="post[image]"]'
-    //この要素の内容が違う
+    'input[type="file"][name="message[image]"]'
   );
   // input要素で値の変化が起きた際に呼び出される関数
   fileField.addEventListener("change", function (e) {
@@ -29,7 +28,6 @@ document.addEventListener("turbo:load", function () {
     const file = e.target.files[0];
     const blob = window.URL.createObjectURL(file);
     //URLを作成→変数に代入
-    console.log(blob);
 
     // 画像を表示するためのdiv要素を生成
     const previewWrapper = document.createElement("div");
@@ -43,5 +41,14 @@ document.addEventListener("turbo:load", function () {
     // 生成したHTMLの要素をブラウザに表示させる
     previewWrapper.appendChild(previewImage);
     previewList.appendChild(previewWrapper);
+  });
+
+
+  formImg.addEventListener("submit", function () {
+    // 送信後にプレビューを削除
+    const previewToRemove = document.querySelector(".preview");
+    if (previewToRemove) {
+      previewToRemove.remove();
+    }
   });
 });

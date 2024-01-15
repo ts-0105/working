@@ -27,10 +27,10 @@
   <div class="form-input">
     <%= f.text_field :content, class: 'form-message', placeholder: "連絡事項、引継ぎなど" %>
       <label class="form-image">
-        <div id="previews"></div>
         <span class="image-file">画像</span>
         <%= f.file_field :image, class: 'hidden' %>
       </label>
   </div>
+  <div id="previews"></div>
   <%= f.submit '送信', class: 'form-submit' %>
 <% end %>

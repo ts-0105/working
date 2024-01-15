@@ -31,7 +31,10 @@ class MessagesController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
+    message = Message.find(params[:id])
+    message.destroy
+    redirect_to root_path
   end
 
   private

@@ -160,3 +160,13 @@
 .room-members {
   color: white;
 }
+
+.preview {
+  
+}
+
+.preview-image {
+  object-fit: contain;
+  height: 50px;
+  width: 50px;
+}

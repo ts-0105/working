@@ -16,4 +16,5 @@
     </div>
     <%= image_tag message.image.variant(resize: '500x500'), class: 'message-image' if message.image.attached? %>
   </div>
+  <%= link_to '削除', room_message_path(id: message.id), data: { turbo_method: :delete } %>
 </div>
