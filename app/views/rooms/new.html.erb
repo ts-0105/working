@@ -1,17 +1,17 @@
 <div class='chat-room-form'>
-  <h1>新規チャットルーム</h1>
+  <h1>新規割り当て</h1>
   <%= form_with model: @room, local: true do |f| %>
     <div class='chat-room-form__field'>
       <div class='chat-room-form__field--left'>
-        <%= f.label :name, 'チャットルーム名', class: 'chat-room-form__label' %>
+        <%= f.label :name, '場所', class: 'chat-room-form__label' %>
       </div>
       <div class='chat-room-form__field--right'>
-        <%= f.text_field :name, class: 'chat__room_name chat-room-form__input', placeholder: 'チャットルーム名を入力してください' %>
+        <%= f.text_field :name, class: 'chat__room_name chat-room-form__input', placeholder: '場所名を入力してください' %>
       </div>
     </div>
     <div class='chat-room-form__field'>
       <div class='chat-room-form__field--left'>
-        <%= label_tag 'room_user_ids[]', 'チャットメンバー', class: 'chat-room-form__label' %>
+        <%= label_tag 'room_user_ids[]', 'メンバー', class: 'chat-room-form__label' %>
       </div>
       <div class='chat-room-form__field--right'>
   <% @users.each do |user| %>
