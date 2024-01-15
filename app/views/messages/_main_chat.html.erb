@@ -7,9 +7,7 @@
       <div class="header-users">
         メンバー：
       <% @room.users.each do |user|%>
-      
         <%= user.name %>
-      
         <% end %>
         </div>
     </div>
@@ -27,11 +25,11 @@
 
 <%= form_with model: [@room, @message], class: 'form', id: 'form', local: true do |f| %>
   <div class="form-input">
-      <%= f.text_field :content, class: 'form-message', placeholder: "連絡事項、引継ぎなど" %>
+    <%= f.text_field :content, class: 'form-message', placeholder: "連絡事項、引継ぎなど" %>
       <label class="form-image">
         <div id="previews"></div>
-      <span class="image-file">画像</span>
-      <%= f.file_field :image, class: 'hidden' %>
+        <span class="image-file">画像</span>
+        <%= f.file_field :image, class: 'hidden' %>
       </label>
   </div>
   <%= f.submit '送信', class: 'form-submit' %>

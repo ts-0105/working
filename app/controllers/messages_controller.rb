@@ -31,6 +31,9 @@ class MessagesController < ApplicationController
     end
   end
 
+  def delete
+  end
+
   private
 
   def message_params

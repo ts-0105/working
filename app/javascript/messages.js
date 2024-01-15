@@ -17,38 +17,11 @@ function post() {
         return null;
       }
 
-      let user;
-      let message;
-      let imageURL;
-      let HTML;
-
-      if (!XHR.response.imageURL) {
-      user = XHR.response.user
-      message = XHR.response.message;
-      HTML = `
-        <div class="message">
-          <div class="upper-message">
-            <div class="message-user">
-              <!-- 投稿したユーザー名情報を出力する -->
-              ${user.name}
-            </div>
-            <div class="message-date">
-              <!-- 投稿した時刻を出力する -->
-              ${message.created_at}
-            </div>
-          </div>
-          <div class="lower-message">
-            <div class="message-content">
-            <!-- 投稿したメッセージ内容を記述する -->
-            ${message.content}
-            </div>
-          </div>
-        </div>`;
-      }else{
-      user = XHR.response.user;
-      message = XHR.response.message;
-      imageURL = XHR.response.imageURL
-      HTML = `
+      const user = XHR.response.user;
+      const message = XHR.response.message;
+      const imageURL = XHR.response.imageURL;
+      const imageHTML = `<img class="message-image" src=${origin + imageURL}></img>`
+      const HTML = `
         <div class="message">
           <div class="upper-message">
             <div class="message-user">
@@ -65,10 +38,12 @@ function post() {
               <!-- 投稿したメッセージ内容を記述する -->
               ${message.content}
             </div>
-            <img class="message-image" src=${origin + imageURL}></img>
+            ${imageURL? imageHTML: ""}
           </div>
         </div>`;
-      }
+
+
+
 const messages = document.querySelector(".messages");
 messages.insertAdjacentHTML("afterbegin", HTML);
 const messageContent = document.getElementById("message_content")
