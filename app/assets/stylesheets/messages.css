@@ -1,0 +1,162 @@
+.wrapper {
+  display: flex;
+}
+
+.side-bar {
+  background-color: #253141;
+  width: 300px;
+  height: 100vh;
+}
+
+.side-bar-header {
+  height: 100px;
+  padding: 0 20px;
+  background-color: purple;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-name a{
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+}
+
+.create-room a {
+  font-size: 10px;
+  border: 1px solid white;
+  padding: 14px;
+  color: white;
+  text-decoration: none;
+  background-color: black;
+}
+
+.rooms {
+  color: white;
+  background-color: green;
+  height: calc(100vh - 100px);
+  padding: 0 20px;
+  overflow: scroll;
+}
+
+.room {
+  padding: 20px 0 40px;
+}
+
+.room-name a {
+  text-decoration: none;
+  color: white;
+}
+
+.chat {
+  background-color: #FFFFFF;
+  width: calc(100vw - 300px);
+}
+
+.chat-header {
+  background-color: blue;
+  color: white;
+  height: 100px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-title {
+  color: white;
+  font-size: 24px;
+  margin-top: 36px;
+}
+
+.header-button {
+  margin-top: 40px;
+}
+
+.header-button a {
+  text-decoration: none;
+  border: 1px solid white;
+  color: white;
+  padding: 20px;
+  background-color: black;
+}
+
+.messages {
+  height: calc(100vh - 100px - 90px);
+  padding: 46px 40px 0;
+  overflow: scroll;
+  background-color: aqua;
+}
+
+.message {
+  margin: 10px 0 0 0;
+}
+
+.upper-message{
+  display: flex;
+}
+
+.message-user {
+  color: #434a54;
+  font-size: 16px;
+}
+
+.message-date {
+  color: #999;
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+.lower-message {
+  margin-top: 10px;
+}
+
+.message-content {
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.form {
+  background-color: red;
+  height: 90px;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-message {
+  border: 1px solid white;
+  background-color: white;
+  height: 25px;
+  text-align: center;
+}
+
+.form-submit {
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  font-size: 16px;
+  height: 50px;
+  margin-left: 15px;
+  padding: 0 20px;
+}
+
+.form-image {
+  font-size: 12px;
+  background-color: yellow;
+  color: rgb(88, 80, 80);
+  border: 1px solid white;
+  text-align: center;
+  height: 25px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.room-members {
+  color: white;
+}

@@ -1,0 +1,33 @@
+<div class="side-bar-header">
+  <div class="header-name">
+    <%= link_to current_user.name, edit_user_path(current_user) %>
+  </div>
+  <div class="create-room">
+    <%= link_to "ワークスペース作成", new_room_path %>
+  </div>
+</div>
+
+<div class="rooms">
+  <% @rooms.each do |room| %>
+    <div class="room">
+      <div class="room-name">
+        <div class="room-name-tem">
+          場所：
+        <%= link_to room.name, room_messages_path(room) %>
+        </div>
+          <div class="room-members">
+            <div class="room-members-tem">
+              メンバー：
+            <% room.users.each do |member| %>
+              <%= member.name %> 
+              <% end %> 
+            </div>
+              <div class="shikiri">
+                ----------------------------------
+              </div>
+          </div>
+      </div>
+    </div>
+  <% end %>
+  
+</div>

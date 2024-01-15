@@ -1,0 +1,38 @@
+<div class="chat-header">
+  <div class="left-header">
+    <div class="header-title">
+      <div class="header-title-tem">
+        場所：<%= @room.name %>
+      </div>
+      <div class="header-users">
+        メンバー：
+      <% @room.users.each do |user|%>
+      
+        <%= user.name %>
+      
+        <% end %>
+        </div>
+    </div>
+  </div>
+  <div class="right-header">
+    <div class="header-button">
+      <%= link_to "作業終了", room_path(@room), data: { turbo_method: :delete } %>
+    </div>
+  </div>
+</div>
+
+<div class="messages">
+  <%= render partial: 'message', collection: @messages %>
+</div>
+
+<%= form_with model: [@room, @message], class: 'form', id: 'form', local: true do |f| %>
+  <div class="form-input">
+      <%= f.text_field :content, class: 'form-message', placeholder: "連絡事項、引継ぎなど" %>
+      <label class="form-image">
+        <div id="previews"></div>
+      <span class="image-file">画像</span>
+      <%= f.file_field :image, class: 'hidden' %>
+      </label>
+  </div>
+  <%= f.submit '送信', class: 'form-submit' %>
+<% end %>
