@@ -50,6 +50,6 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
+  url: <%= ENV['DATABASE_URL'] %>
   database: working_production
-  username: working
-  password: <%= ENV["WORKING_DATABASE_PASSWORD"] %>
