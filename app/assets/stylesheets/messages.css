@@ -3,7 +3,7 @@
 }
 
 .side-bar {
-  background-color: #253141;
+  background-color: #333333;
   width: 300px;
   height: 100vh;
 }
@@ -11,7 +11,7 @@
 .side-bar-header {
   height: 100px;
   padding: 0 20px;
-  background-color: purple;
+  background-color: darkolivegreen;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,7 +34,7 @@
 
 .rooms {
   color: white;
-  background-color: green;
+  background-color: #333333;
   height: calc(100vh - 100px);
   padding: 0 20px;
   overflow: scroll;
@@ -50,12 +50,12 @@
 }
 
 .chat {
-  background-color: #FFFFFF;
+  background-color: #666666;
   width: calc(100vw - 300px);
 }
 
 .chat-header {
-  background-color: blue;
+  background-color: #00332e;
   color: white;
   height: 100px;
   padding: 0 40px;
@@ -85,11 +85,12 @@
   height: calc(100vh - 100px - 90px);
   padding: 46px 40px 0;
   overflow: scroll;
-  background-color: aqua;
+  background-color: #666666;
 }
 
 .message {
   margin: 10px 0 0 0;
+  color: white;
 }
 
 .upper-message{
@@ -97,12 +98,12 @@
 }
 
 .message-user {
-  color: #434a54;
+  color: skyblue;
   font-size: 16px;
 }
 
 .message-date {
-  color: #999;
+  color: whitesmoke;
   font-size: 12px;
   padding-left: 10px;
 }
@@ -117,7 +118,7 @@
 }
 
 .form {
-  background-color: red;
+  background-color: #6a5e36;
   height: 90px;
   padding: 20px 40px;
   display: flex;
@@ -143,8 +144,8 @@
 
 .form-image {
   font-size: 12px;
-  background-color: yellow;
-  color: rgb(88, 80, 80);
+  background-color: darkcyan;
+  color: white;
   border: 1px solid white;
   text-align: center;
   height: 25px;
@@ -162,13 +163,16 @@
 }
 
 .preview {
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 
 .preview-image {
   object-fit: contain;
-  height: 50px;
-  width: 50px;
+  height: 70px;
+  width: 70px;
 }
 
 .working-origin {
@@ -176,3 +180,10 @@
   color: #999;
   font-size: 50px;
 }
+
+#delete-button {
+  width: 50px;
+  border: solid 1px blue;
+  text-align: center;
+}
+

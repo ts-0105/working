@@ -20,7 +20,10 @@ function post() {
       const user = XHR.response.user;
       const message = XHR.response.message;
       const imageURL = XHR.response.imageURL;
-      const imageHTML = `<img class="message-image" src=${origin + imageURL}></img>`
+      const imageHTML = `<img class="message-image" src=${
+        origin + imageURL
+      }></img>`;
+
       const HTML = `
         <div class="message">
           <div class="upper-message">
@@ -38,18 +41,20 @@ function post() {
               <!-- 投稿したメッセージ内容を記述する -->
               ${message.content}
             </div>
-            ${imageURL? imageHTML: ""}
+            ${imageURL ? imageHTML : ""}
+          </div>
+          <div id="delete-button">
+            <a data-turbo-method="delete" href="${postUrl}/${message.id}">削除</a>
           </div>
         </div>`;
 
+      const messages = document.querySelector(".messages");
+      messages.insertAdjacentHTML("afterbegin", HTML);
+      const messageContent = document.getElementById("message_content");
+      const messageImage = document.getElementById("message_image");
+      messageContent.value = null;
+      messageImage.value = null;
 
-
-const messages = document.querySelector(".messages");
-messages.insertAdjacentHTML("afterbegin", HTML);
-const messageContent = document.getElementById("message_content")
-const messageImage = document.getElementById("message_image");
-messageContent.value = null
-messageImage.value = null
     }
 })
 }

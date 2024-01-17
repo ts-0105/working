@@ -34,7 +34,7 @@ class MessagesController < ApplicationController
   def destroy
     message = Message.find(params[:id])
     message.destroy
-    redirect_to root_path
+    redirect_to room_messages_path
   end
 
   private
