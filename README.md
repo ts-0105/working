@@ -45,6 +45,7 @@ https://gyazo.com/202fbe53b4a4322f1ff7dca88b404b10
 https://gyazo.com/caaac2846a03325baa2a051d836b283c
 # 実装予定の機能
 表示をもう少し見やすく
+
 投稿したものの編集機能
 
 # データベース設計
