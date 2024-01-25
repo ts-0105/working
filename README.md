@@ -33,12 +33,15 @@ https://working-xqs3.onrender.com
 
 # 実装した機能についての画像やGIFおよび説明
 ・トップページ
+
 https://gyazo.com/79e7c0a201043a47c103bf57abe35032
 
 ・ワークスペース選択→ワークスペースの内容
+
 https://gyazo.com/202fbe53b4a4322f1ff7dca88b404b10
 
 ・ワークスペースにて文書投稿
+
 https://gyazo.com/caaac2846a03325baa2a051d836b283c
 # 実装予定の機能
 表示をもう少し見やすく
