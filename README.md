@@ -9,8 +9,10 @@ working
 https://working-xqs3.onrender.com
 
 # テスト用アカウント
-・Basic認証パスワード 2222
-・Basic認証ID admin
+・Basic認証パスワード: 2222
+・Basic認証ID: admin
+・テスト用アカウントemail: test@test
+・テスト用アカウントパスワード: abc123 
 
 
 ## 利用方法
