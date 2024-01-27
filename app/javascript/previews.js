@@ -33,7 +33,7 @@ document.addEventListener("turbo:load", function () {
     const previewWrapper = document.createElement("div");
     previewWrapper.setAttribute("class", "preview");
     previewWrapper.innerHTML=
-    `<div class="preview-title">プレビュー：</div>`
+    `<div class="preview-title">画像<br>プレビュー：</div>`
 
     // 表示する画像を生成
     const previewImage = document.createElement("img");

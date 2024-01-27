@@ -25,12 +25,16 @@
 
 <%= form_with model: [@room, @message], class: 'form', id: 'form', local: true do |f| %>
   <div class="form-input">
+    <div class="message-input">
     <%= f.text_area :content, class: 'form-message', placeholder: "連絡事項、引継ぎなど" %>
+    </div>
+    <div class="image-input">
       <label class="form-image">
         <span class="image-file">画像</span>
         <%= f.file_field :image, class: 'hidden' %>
       </label>
+    </div>
+    <div id="previews"></div>
+    <%= f.submit '送信', class: 'form-submit' %>
   </div>
-  <div id="previews"></div>
-  <%= f.submit '送信', class: 'form-submit' %>
 <% end %>

@@ -120,16 +120,18 @@
 .form {
   background-color: #6a5e36;
   height: 90px;
-  padding: 20px 40px;
+  padding: 20px;
+}
+
+.form-input{
   display: flex;
-  justify-content: space-between;
 }
 
 .form-message {
   border: 1px solid white;
   background-color: white;
-  height: 25px;
-  text-align: center;
+  height: 50px;
+  width: 600px;
 }
 
 .form-submit {
@@ -138,20 +140,20 @@
   color: white;
   font-size: 16px;
   height: 50px;
-  margin-left: 15px;
+  margin-left: 50px;
   padding: 0 20px;
 }
 
-.form-image {
-  font-size: 12px;
+.image-input{
+  height: 50px;
+  width: 50px;
   background-color: darkcyan;
   color: white;
   border: 1px solid white;
-  text-align: center;
-  height: 25px;
-  align-items: center;
   display: flex;
+  align-items: center;
   justify-content: center;
+  margin-left: 5px;
 }
 
 .hidden {
@@ -160,6 +162,12 @@
 
 .room-members {
   color: white;
+}
+
+#previews{
+  margin-left: 5px;
+  color: white;
+  font-size: 12px;
 }
 
 .preview {
