@@ -16,4 +16,6 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :email)
   end
+
+  #ユーザー削除機能追加
 end
