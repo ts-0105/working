@@ -2,6 +2,9 @@
   <div class="header-name">
     <%= link_to current_user.name, edit_user_path(current_user) %>
   </div>
+  <div class="return-top">
+    <%= link_to "TOPへ戻る", root_path %>
+  </div>
   <div class="create-room">
     <%= link_to "ワークスペース作成", new_room_path %>
   </div>
